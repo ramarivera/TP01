@@ -18,6 +18,10 @@ namespace TP01
 	{
 		public const int LIM_SUPERIOR = 1000;
 
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="args"></param>
 		static void Main(string[] args)
 		{
 			int n = 0;

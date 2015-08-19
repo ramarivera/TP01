@@ -89,13 +89,16 @@ namespace TP01
 		{
 			int length = vector.Length;
 			string aux;
-			for (int j = 0; j < length - 1; j++)
+			for (int i = 1; i < length; i++)
 			{
-				if (Mayor(vector[j], vector[j + 1]))
+				for (int j = 0; j < length - i; j++)
 				{
-					aux = vector[j];
-					vector[j] = vector[j + 1];
-					vector[j + 1] = aux;
+					if (Mayor(vector[j], vector[j + 1]))
+					{
+						aux = vector[j];
+						vector[j] = vector[j + 1];
+						vector[j + 1] = aux;
+					}
 				}
 			}
 		}
