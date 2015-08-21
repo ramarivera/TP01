@@ -21,7 +21,7 @@ namespace TP01
 			for (int anio = LIM_INFERIOR; anio <= LIM_SUPERIOR; anio++)
 			{
 				if (DateTime.IsLeapYear(anio))
-				//(anio % 4 == 0 && (anio % 100 != 0 || anio % 400 == 0)) 
+				// (anio % 4 == 0 && (anio % 100 != 0 || anio % 400 == 0)) 
 				{
 					Console.WriteLine(anio);
 				}

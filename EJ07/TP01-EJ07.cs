@@ -7,8 +7,7 @@ using System.Text;
 namespace TP01
 {
 	/// <summary>
-	/// Desarrolle una aplicación que calcule aproximadamente el número  πcon la fórmula 
-	/// de Lebniz:  
+	/// Desarrolle una aplicación que calcule aproximadamente el número  π con la fórmula de Lebniz:  
 	/// 
 	/// Determine el criterio de fin de cálculo, que puede ser la cantidad de términos utilizados. La 
 	/// API  de  C#  posee  una  constante  con  el  valor  de  dicho número  (Math.PI),  compare  el 
@@ -16,25 +15,19 @@ namespace TP01
 	/// </summary>
 	class EJ07
 	{
-		public const int LIM_SUPERIOR = 1000;
-
-		/// <summary>
-		/// 
-		/// </summary>
-		/// <param name="args"></param>
 		static void Main(string[] args)
 		{
-			int n = 0;
 			double sumatoria = 0, pi;
 
-			do
+			Console.Write("Ingrese la cantidad de iteraciones a relizar: ");
+			int operaciones = int.Parse(Console.ReadLine());
+			for (int i = 0; i <= operaciones; i++)
 			{
-				sumatoria += (Math.Pow(-1, n)) / (2 * n + 1);
-				n++;
-			} while (n < LIM_SUPERIOR);
+				sumatoria += ((Math.Pow(-1, i)) / (2 * i + 1));
+			}
 			pi = sumatoria * 4;
 			Console.WriteLine("El resultado del calculo es: {0}", pi);
-			Console.WriteLine("La diferencia porcentual entre el Pi calculado y Math.Pi es: {0}", (Math.PI - pi) / Math.PI);
+			Console.WriteLine("La diferencia porcentual entre el Pi calculado y Math.Pi es: {0} %", Math.Abs((Math.PI - pi) / Math.PI)*100);
 			Console.ReadKey();
 		}
 	}

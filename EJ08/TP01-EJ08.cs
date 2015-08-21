@@ -13,13 +13,13 @@ namespace TP01
 	/// </summary>
 	class EJ08
 	{
-		public const int LIM_SUPERIOR = 50;
+		public const int CANTIDAD_TERMINOS = 50;
 
 		static void Main(string[] args)
 		{
-			long fb0 = 0, fb1 = 1, aux;
-			Console.WriteLine("El termino 00 de la sucesion de Fibonacci es: \t 0");
-			for (int i = 0; i < LIM_SUPERIOR; i++)
+			long fb0 = 1, fb1 = 1, aux;
+			Console.WriteLine("El termino 01 de la sucesion de Fibonacci es: \t {0}",fb0);
+			for (int i = 2; i <= CANTIDAD_TERMINOS; i++)
 			{
 				Console.WriteLine("El termino {0} de la sucesion de Fibonacci es: \t {1}", i.ToString("00"), fb1);
 				aux = fb1;

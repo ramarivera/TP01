@@ -17,16 +17,15 @@ namespace TP01
 		{
 			int i = LIM_INFERIOR;
 			int suma = 0, con = 0;
-
 			do
 			{
 				suma += i;
 				con++;
 				i++;
-			} while (i < LIM_SUPERIOR);
+			} while (i <= LIM_SUPERIOR);
 			Console.WriteLine("La suma es: {0}", suma);
 			Console.WriteLine("El total de numeros sumados es: {0}", con);
-			Console.WriteLine("El promedio es: {0}", suma / con);
+			Console.WriteLine("El promedio es: {0}", suma / (double) con);
 			Console.ReadKey();
 		}
 	}

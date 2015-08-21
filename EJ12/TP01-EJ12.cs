@@ -31,8 +31,8 @@ namespace TP01
 		static void Main(string[] args)
 		{
 			Console.Write("Ingrese un numero: ");
-			UInt64 numero = UInt64.Parse(Console.ReadLine());
-			Console.WriteLine("El factorial de {0} es: {1}", numero, CalcularFactorial(numero));
+			int numero = int.Parse(Console.ReadLine());
+			Console.WriteLine("El factorial de {0} es: {1}", numero, CalcularFactorial((UInt64) numero));
 			Console.ReadKey();
 		}
 	}

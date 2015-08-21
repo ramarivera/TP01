@@ -17,17 +17,14 @@ namespace TP01
 		{
 			int con = 0, suma = 0;
 
-			for (int i = 1; i < 100; i++)
+			for (int i = 1; i <= 100; i=+2)
 			{
-				if ((i % 2) != 0)
-				{
-					suma += i;
-					con++;
-				}
+				suma += i;
+				con++;
 			}
 			Console.WriteLine("La suma es: {0}", suma);
 			Console.WriteLine("El total de numeros sumados es: {0}", con);
-			Console.WriteLine("El promedio es: {0}", suma / con);
+			Console.WriteLine("El promedio es: {0}", suma / (double) con);
 			Console.ReadKey();
 		}
 	}

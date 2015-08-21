@@ -24,8 +24,7 @@ namespace TP01
 		private static string InvertirCadena(string cadena)
 		{
 			StringBuilder resultado = new StringBuilder("");
-			int length = cadena.Length;
-			for (int i = length - 1; i >=0; i--)
+			for (int i = cadena.Length - 1; i >=0; i--)
 			{
 				resultado.Append(cadena[i]);
 			}
@@ -38,21 +37,21 @@ namespace TP01
 		/// <param name="cadena1"></param>
 		/// <param name="cadena2"></param>
 		/// <returns>True si cadena1>cadena2</returns>
-		private static bool Mayor(string cadena1, string cadena2)
+		private static bool Menor(string cadena1, string cadena2)
 		{
-			/*for (int i = 0; i < cadena1.Length; i++)
+			/* for (int i = 0; i < cadena1.Length; i++)
 			{
 				if (cadena2.Length - 1 < i)
 				{
 					break;
 				}
-				if (cadena1[i] > cadena2[i])
+				if (cadena1[i] < cadena2[i])
 				{
 					return true;
 				}
 			}
-			return false;*/
-			return (String.Compare(cadena1, cadena2, StringComparison.Ordinal)) > 0;
+			return false; */
+			return (String.Compare(cadena1, cadena2, StringComparison.Ordinal)) < 0;
 		}
 		/// <summary>
 		/// Muestra los elementos del vector
@@ -93,7 +92,7 @@ namespace TP01
 			{
 				for (int j = 0; j < length - i; j++)
 				{
-					if (Mayor(vector[j], vector[j + 1]))
+					if (Menor(vector[j], vector[j + 1]))
 					{
 						aux = vector[j];
 						vector[j] = vector[j + 1];
@@ -107,8 +106,8 @@ namespace TP01
 		{
 			if (args.Length==0)
 			{
-				args = new string[] { "HOLA", "ME", "LLAMO", "Ramiro", "Rivera" };
-			} 
+				args = new string[] { "Ramiro", "RIVERA", "Martin", "ARRÚA", "ROBERTO" , "Ceferino" };
+			} // Caso para poder probar el codigo mas rapido
 			int length = args.Length;
 			Console.WriteLine("El vector contiene {0} elementos: ", length);
 			MostrarVector(args);

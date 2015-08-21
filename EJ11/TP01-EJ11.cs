@@ -15,7 +15,7 @@ namespace TP01
 		/// <summary>
 		/// Calcula el area del circulo
 		/// </summary>
-		/// <param name="radio">Radio del circulo.</param>
+		/// <param name="radio">Radio del circulo</param>
 		/// <returns>Area del circulo</returns>
 		static double CalcularArea(double radio)
 		{

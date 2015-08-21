@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 
 
-
 namespace TP01
 {
 	/// <summary>
@@ -12,14 +11,14 @@ namespace TP01
 	/// </summary>
 	class EJ04
 	{
-		public const int LIM_INFERIOR = 5, LIM_SUPERIOR = 100;
-
+		const int LIM_INFERIOR = 5, LIM_SUPERIOR = 100;
+	
 		static void Main(string[] args)
 		{
 			int i = LIM_INFERIOR;
 			int suma = 0, con = 0;
 
-			while (i < LIM_SUPERIOR)
+			while (i <= LIM_SUPERIOR)
 			{
 				suma += i;
 				con++;
@@ -27,7 +26,7 @@ namespace TP01
 			}
 			Console.WriteLine("La suma es: {0}", suma);
 			Console.WriteLine("El total de numeros sumados es: {0}", con);
-			Console.WriteLine("El promedio es: {0}", suma / con);
+			Console.WriteLine("El promedio es: {0}", suma / (double) con);
 			Console.ReadKey();
 		}
 	}
